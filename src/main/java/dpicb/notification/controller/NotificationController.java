@@ -17,6 +17,7 @@ public class NotificationController {
 
     @PostMapping("/github-push")
     public void githubPush(@RequestBody String message) {
-        log.info(message);
+        String generatedMessage = slackService.githubResponseToMessage(message);
+        slackService.postMessage(generatedMessage, "#dpic-b-alarm-test");
     }
 }
