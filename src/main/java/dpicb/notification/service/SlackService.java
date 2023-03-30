@@ -14,9 +14,6 @@ import java.io.IOException;
 @Slf4j
 @Service
 public class SlackService {
-    @Value(value = "${slack.token}")
-    String token;
-
     public void postMessage(String message, String channel) {
         Slack slack = Slack.getInstance();
         MethodsClient methods = slack.methods("");
