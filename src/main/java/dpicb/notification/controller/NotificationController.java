@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RequiredArgsConstructor
-@RestController("/notification")
+@RestController
 public class NotificationController {
 
     private final SlackService slackService;
