@@ -21,9 +21,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
-    implementation "com.slack.api:bolt"
-    implementation "com.slack.api:bolt-servlet"
-    implementation "com.slack.api:bolt-jetty"
+    implementation "com.slack.api:slack-api-client:1.28.1"
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

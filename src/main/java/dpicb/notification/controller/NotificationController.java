@@ -4,6 +4,7 @@ import dpicb.notification.service.SlackService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +15,7 @@ public class NotificationController {
 
     private final SlackService slackService;
 
-    @GetMapping("/github-push")
+    @PostMapping("/github-push")
     public void githubPush(@RequestBody String message) {
         log.info(message);
     }
