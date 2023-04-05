@@ -20,8 +20,7 @@ import java.io.IOException;
 @Service
 public class SlackService {
 
-    @Value("${slack.token}")
-    String token;
+    String token = System.getenv("SLACK_TOKEN");
 
     public String githubResponseToMessage(String message) {
         StringBuffer generatedMessage = new StringBuffer();
